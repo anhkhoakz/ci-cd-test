@@ -39,8 +39,11 @@ jobs:
       - name: Run tests
         run: flutter test
 
-      # - name: Format code
-      #   run: flutter format .
+      - name: Format code
+        run: dart format lib
+
+      - name: Lint code
+        run: dart fix --apply lib
 
       - name: Commit changes
         run: |
